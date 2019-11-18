@@ -21,7 +21,8 @@ class ContasAPagarController{
         xhr.onload = function() {
             let responseObj = xhr.response;
             responseObj.map(c=>{
-                let conta = new ContasAPagar(c.nome, c.valor, moment(c.inicio).add(1,'months'), c.quantidadeParcelas, c._id);
+                let conta = new ContasAPagar(c.nome, c.valor, moment(c.inicio).add(1,'months'), c.quantidadeParcelas, 
+                self._recuperaParametro('email'), c._id);
                 console.log(conta);
                 self._listaContasAPagar.adiciona(conta);            
             })

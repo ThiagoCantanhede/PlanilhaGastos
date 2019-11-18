@@ -19,7 +19,7 @@ class ContasAPagarView{
         let mesInicio = moment(linha.inicio).month();
         
         let linhaTabela = document.createElement("tr");      
-        linhaTabela.setAttribute("id", linha._id);                       
+        linhaTabela.setAttribute("id", linha.id);                       
         
         let parcelas = this._retornarQuantidadeParcelas(mesInicio, linha);
 
@@ -37,7 +37,7 @@ class ContasAPagarView{
     _criarColuna(valor, conta = null){
         let colunaTabela = document.createElement("td");
         if(conta != null){ 
-            colunaTabela.setAttribute("IDLINHA", conta._id); 
+            colunaTabela.setAttribute("IDLINHA", conta.id); 
         }
         colunaTabela.textContent = valor; 
         return colunaTabela; 

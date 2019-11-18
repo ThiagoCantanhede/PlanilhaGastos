@@ -1,10 +1,11 @@
 class ContasAPagar{
-    constructor(nome, valor, inicio, quantidade , usuario){
+    constructor(nome, valor, inicio, quantidade , usuario, id){
         this._nome = nome;
         this._valor = valor;
         this._inicio = inicio;
         this._quantidadeParcelas = quantidade;
         this._usuario = usuario;
+        this._id = id;
     }
 
     get nome(){
@@ -25,6 +26,10 @@ class ContasAPagar{
     get usuario(){
         return this._usuario;
     }
+
+    get id(){
+        return this._id;
+    }    
 
     get contaJson(){
         let conta = {
