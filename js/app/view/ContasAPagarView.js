@@ -30,7 +30,7 @@ class ContasAPagarView{
         this._criarColunasComValorParcela(linha, linhaTabela, parcelas);
         
         this._elemento.appendChild(linhaTabela);       
-        
+        // teste para o git
         this._limparFormulario();
     }
     
